@@ -1,4 +1,4 @@
-const question = document.getElementById('question');
+const content = document.getElementById('question');
 
 const questions = {
   1: {
@@ -53,7 +53,7 @@ const questions = {
       b: "Appare Vestigium",
       c: "Cruciatus"
     },
-    correctAnswer: "b: Apare Vestigium"
+    correctAnswer: "b: Appare Vestigium"
   },
   7: {
     question: "Where is the entrance to the Diagon Alley?",
@@ -102,9 +102,13 @@ for (let j = 1; j < keys.length + 1; j++) {
 
 let i = 0;
 
+(function startQuizz() {
+  content.innerHTML = `<button onclick="showQuestion()">Start quizz</button>`;
+})();
+
 function showQuestion() {
   i++;
-  question.innerHTML = `
+  content.innerHTML = `
   <h2>${questions[i]['question']}</h2>
   <div 
   id="answer" 
@@ -115,3 +119,4 @@ function showQuestion() {
   </div>
 `;
 }
+
