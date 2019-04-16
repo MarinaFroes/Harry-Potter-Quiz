@@ -136,3 +136,12 @@ function getAnswer() {
   }
 }
 
+function calculateResult(userAnswers, correctAnswers) {
+  let result = 0;
+  userAnswers.forEach(
+    userAnswer => correctAnswers.forEach(correctAnswer => {
+      userAnswer === correctAnswer && result++
+    })
+  )
+  return (`You got ${result} correct answers from ${correctAnswers.length}`);
+}
