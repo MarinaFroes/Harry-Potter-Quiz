@@ -92,3 +92,26 @@ const questions = {
     correctAnswer: "a: Holly and phoenix feather"
   },
 }
+
+const correctAnswers = [];
+const keys = Object.keys(questions);
+
+for (let j = 1; j < keys.length + 1; j++) {
+  correctAnswers.push(questions[j]['correctAnswer']);
+}
+
+let i = 0;
+
+function showQuestion() {
+  i++;
+  question.innerHTML = `
+  <h2>${questions[i]['question']}</h2>
+  <div 
+  id="answer" 
+  onclick="getAnswer()">
+    <button>a: ${questions[i]['answerOptions']['a']}</button>
+    <button>b: ${questions[i]['answerOptions']['b']}</button>
+    <button>c: ${questions[i]['answerOptions']['c']}</button>
+  </div>
+`;
+}
