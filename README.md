@@ -1,5 +1,5 @@
 
-![Favicon]('./img/favicon.ico) 
+![Favicon]('./img/favicon.ico') 
 # Harry Potter Quizz
 
 ## Introduction
