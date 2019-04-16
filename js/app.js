@@ -145,3 +145,10 @@ function calculateResult(userAnswers, correctAnswers) {
   )
   return (`You got ${result} correct answers from ${correctAnswers.length}`);
 }
+
+function finishQuizz() {
+  content.innerHTML = `<h2>The game is over</h2>
+  <p>${calculateResult(userAnswers, correctAnswers)}</p>
+  <button onclick="window.location.reload()">Play again</button>
+  `;
+}
