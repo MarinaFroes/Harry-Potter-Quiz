@@ -120,3 +120,19 @@ function showQuestion() {
 `;
 }
 
+const answerOptions = document.getElementById('answer');
+
+const userAnswers = [];
+
+function getAnswer() {
+  const chosenAnswer = event.target;
+  if (chosenAnswer.nodeName === 'BUTTON') {
+    userAnswers.push(chosenAnswer.innerText);
+  }
+  if (i < correctAnswers.length) {
+    showQuestion();
+  } else {
+    finishQuizz();
+  }
+}
+
