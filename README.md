@@ -1,10 +1,10 @@
 
 ![Favicon]('./img/favicon.ico') 
-# Harry Potter Quizz
+# Harry Potter Quiz
 
 ## Introduction
 
-This Harry Potter quizz aims to test your knowledge about the Harry Potter world.
+This Harry Potter quiz aims to test your knowledge about the Harry Potter world.
 
 The HTML and CSS files were validated by the followings validators  without any errors or warnings.
 - [W3C HTML Validator](https://jigsaw.w3.org/css-validator/)
@@ -25,15 +25,15 @@ This project is organized as follows:
 
 ## How does it work?
 
-- Starting the quizz
-  - The `startQuizz()` function is an IIFE and renders the 'Start quizz' `button`.
-  - Clicking on the 'Start quizz' `button` invokes the `showQuestion()` function.
+- Starting the quiz
+  - The `startQuiz()` function is an IIFE and renders the 'Start quiz' `button`.
+  - Clicking on the 'Start quiz' `button` invokes the `showQuestion()` function.
   - The `showQuestion()` function shows each of the questions stored in the `questions` object and invokes `getAnswer()` function each time one of the option button is clicked.
 - Storing the user's answers
-  - `getAnswer()` function stores the clicked options in the `userAnswers` array and invokes `showQuestion()` for the next question or `finishQuizz()` function if the questions are over.
+  - `getAnswer()` function stores the clicked options in the `userAnswers` array and invokes `showQuestion()` for the next question or `finishQuiz()` function if the questions are over.
 - Finishin game
   - `calculateResult()` function compares the `userAnswers` array with the `correctAnswers` array and returns how many correct answers the user got from the total of questions.
-  - `finishQuizz()` function invokes `calculateResult()` and renders a 'Play again' `button` to reload the page and restart the game.
+  - `finishQuiz()` function invokes `calculateResult()` and renders a 'Play again' `button` to reload the page and restart the game.
   
 
 ## How to install and use it?

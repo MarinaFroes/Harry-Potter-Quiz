@@ -1,4 +1,4 @@
-const content = document.getElementById('question');
+const content = document.getElementById('content');
 
 const questions = {
   1: {
@@ -102,8 +102,8 @@ for (let j = 1; j < keys.length + 1; j++) {
 
 let i = 0;
 
-(function startQuizz() {
-  content.innerHTML = `<button onclick="showQuestion()">Start quizz</button>`;
+(function startQuiz() {
+  content.innerHTML = `<button onclick="showQuestion()">Start quiz</button>`;
 })();
 
 function showQuestion() {
@@ -132,7 +132,7 @@ function getAnswer() {
   if (i < correctAnswers.length) {
     showQuestion();
   } else {
-    finishQuizz();
+    finishQuiz();
   }
 }
 
@@ -146,7 +146,7 @@ function calculateResult(userAnswers, correctAnswers) {
   return (`You got ${result} correct answers from ${correctAnswers.length}`);
 }
 
-function finishQuizz() {
+function finishQuiz() {
   content.innerHTML = `<h2>The game is over</h2>
   <p>${calculateResult(userAnswers, correctAnswers)}</p>
   <button onclick="window.location.reload()">Play again</button>
